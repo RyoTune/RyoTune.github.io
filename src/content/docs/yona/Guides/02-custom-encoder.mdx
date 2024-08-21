@@ -1,0 +1,55 @@
+---
+title: Custom Encoder
+description: Learn how to make a custom encoder for Yona.
+---
+
+import { Game_P5R, Game_P3R } from "../../../../types/game";
+
+**Yona** includes encoders for every format supported by **VGAudio**.
+But some games might require more specific audio settings, such as **{Game_P5R.name}** and **{Game_P3R.name}**.
+
+For games like those, you can create a **Custom Encoder** config.
+
+## Encoder Config
+
+**Custom Encoders** are just `.ini` files with some of the following settings set.
+
+```
+;REQUIRED
+;The encoder name is how encoders are identified.
+;Changing it will break any tracks using the encoder.
+name=
+
+;REQUIRED
+;Examples: adx, hca
+out_container_format=
+
+out_format=
+loop_alignment=
+block_size=
+version=
+frame_size=
+filter=
+adx_type=
+key_string=
+key_code=
+endianess=
+hca_quality=
+bitrate=
+limit_bitrate=
+encode_cbr=
+```
+
+Since the only encoder in **Yona** is **VGAudio** currently, the settings available are what it supports.
+See the official repo for full details: [https://github.com/Thealexbarney/VGAudio](https://github.com/Thealexbarney/VGAudio)
+
+## Creating a Custom Encoder
+
+1. Go to: `YONA_INSTALL_FOLDER/audio/encoders/VGAudio`.
+2. Create a text file in the folder and name it whatever you want **but** make sure it ends in `.ini`.
+3. Open the file in your text editor.
+4. Set the `name` and `out_container_format` for your encoder.
+5. Set any other settings you need, such as the audio `key_code`.
+6. Save your file and restart **Yona**.
+7. If you haven't already, enable **Developer Mode** in **Yona's** settings.
+8. Your encoder should now be available wherever an encoder can be selected, such as in the **Track Panel**.
