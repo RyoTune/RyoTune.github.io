@@ -1,0 +1,186 @@
+---
+title: Music Replacement with Yona
+description: An introduction to replacing music with Yona.
+---
+
+import {
+  Steps,
+  Aside,
+  Tabs,
+  TabItem,
+  Card,
+  CardGrid,
+} from "@astrojs/starlight/components";
+import { Image } from "astro:assets";
+
+import ModInfoContainer from "../../../../components/ModInfoContainer.astro";
+import { Mod_Ryo, Mod_PersonaEssentials } from "../../../../types/game";
+
+import img_dl_net8 from "./images/download_net8.png";
+import img_dl_yona from "./images/download_yona.png";
+import img_extract_yona from "./images/extract_yona.png";
+import img_yona_home from "./images/yona_home.png";
+import img_yona_filter from "./images/yona_filter.png";
+import img_yona_create_project from "./images/yona_create_project.png";
+import img_yona_select_output from "./images/yona_select_output.png";
+import img_yona_select_folder from "./images/yona_select_folder.png";
+import img_yona_with_output from "./images/yona_with_output.png";
+import img_yona_create_project_finish from "./images/yona_create_project_finish.png";
+import img_yona_project from "./images/yona_project.png";
+import img_yona_project_tracklist from "./images/yona_project_tracklist.png";
+import img_yona_project_track_panel from "./images/yona_project_track_panel.png";
+import img_yona_project_track_panel_settings from "./images/yona_project_track_panel_settings.png";
+import img_yona_project_track_panel_select_file from "./images/yona_project_track_panel_select_file.png";
+import img_yona_project_track_panel_with_file from "./images/yona_project_track_panel_with_file.png";
+import img_yona_project_track_panel_with_loop from "./images/yona_project_track_panel_with_loop.png";
+import img_yona_project_build_button from "./images/yona_project_build_button.png";
+import img_yona_project_build_finish from "./images/yona_project_build_finish.png";
+
+**Yona** comes with BGM project templates for mulitple games, making music replacement an incredibly easy process.
+
+## Getting Started with Yona
+
+1. Download and install **.NET 8 Runtime** for your system: [https://dotnet.microsoft.com/en-us/download/dotnet/8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+
+<Image src={img_dl_net8} alt=".NET 8 Runtime Download" />
+
+2. Download the latest version of **Yona** on **Github** for your system: [https://github.com/RyoTune/Yona/releases](https://github.com/RyoTune/Yona/releases)
+
+<Image src={img_dl_yona} alt="Yona Download" />
+
+3. Extract **Yona** from the downloaded file.
+
+<Image src={img_extract_yona} alt="Extract Yona with 7-Zip" />
+
+4. Start **Yona** by running `Yona.exe` on Windows or `Yona` on Linux.
+
+<Image src={img_yona_home} alt="Yona Home Page" />
+
+## Creating Your Music Mod
+
+### Requirements
+
+Install the required mod for audio replacement in your game.
+
+#### Persona 5 Royal, Persona 4 Golden, Persona 3 Portable
+
+<ModInfoContainer mod={Mod_PersonaEssentials} />
+
+#### Other Games
+
+<ModInfoContainer mod={Mod_Ryo} />
+
+### Steps
+
+1. In **Reloaded**, [create a new mod](/guides/reloaded/01-create-mod) and enable it.
+
+2. [Add a **Mod Dependency**](/guides/reloaded/02-mod-dependency) on the required mod for your game.
+
+3. Open your mod's folder and make sure you can find it.
+
+## Creating Your Music Project
+
+1. In **Yona's** home page, click **Filter** then select your **game** and the **BGM** filters. The remaining item will be the **Project Template** for your game's BGM.
+
+<Image src={img_yona_filter} alt="Filter Yona Project Templates" />
+
+2. Click on your game's **BGM template** to create a new **Yona** project.
+
+<Image src={img_yona_create_project} alt="Create Yona Project" />
+
+3. In the **Create Project** window, select an **Output Folder**.
+
+<Image src={img_yona_select_output} alt="Select Project Output Folder" />
+
+4. In the **Folder Select** window, go to your mod's folder and click **Select Folder**.
+
+<Image src={img_yona_select_folder} alt="Find and select your mod's folder." />
+
+<Image src={img_yona_with_output} alt="Find and select your mod's folder." />
+
+6. Back in the **Create Project** window, click **Create**.
+
+<Image
+  src={img_yona_create_project_finish}
+  alt="Finish creating your project by clicking the Create button."
+/>
+
+7. Your new project's **Project Page** will automatically open.
+
+<Image src={img_yona_project} alt="Your new project's page." />
+
+## Selecting Your Music
+
+1. In the **Project Page**, the main content will be the **Tracklist** containg all of the game's music.
+
+<Image src={img_yona_project_tracklist} alt="The project tracklist." />
+
+2. Find and select a track you want to replace to open the **Track Panel**.
+
+<Image
+  src={img_yona_project_track_panel}
+  alt="Select a track to open the Track Panel."
+/>
+
+3. In the **Track Panel**, can change two settings: the **File** to use for the track and its **Loop**.
+
+<Image
+  src={img_yona_project_track_panel_settings}
+  alt="Set the track's File and Loop settings in the Track Panel."
+/>
+
+4. Click on the **Select File** button then find and select the audio file you want to replace the track with.
+
+   - **Supported Files:** Files should usually be **WAVs**, but any format supported by **VGAudio** can be used, such as **HCA** and **ADX**.
+
+   - **Unsupported Files:** Encrypted files, such as those extracted from some games, will not work and must be converted to a non-encrypted format first.
+
+<Image
+  src={img_yona_project_track_panel_select_file}
+  alt="Click the Select File button to select a replacement audio file for the track."
+/>
+
+5. After selecting your file, the **Loop** settings will unlock.
+
+<Image
+  src={img_yona_project_track_panel_with_file}
+  alt="The Track Panel's loop settings will unlock after selecting a file."
+/>
+
+6. [Find the loop points](/guides/audio/music-looping) for your file and enter them here.
+
+<Image
+  src={img_yona_project_track_panel_with_loop}
+  alt="Set the file's loop settings in the Track Panel."
+/>
+
+7. Repeat these steps for any other tracks you want to replace.
+
+## Building Your Music
+
+1. Click the **Build** button in the top-right of the **Project Page** to build your music project/mod. Building does the following:
+   1. Convert your files to the format supported by the game.
+   2. Add your loop data to the new files.
+   3. Since you set the the **Output Folder** to your mod's folder, the converted files will placed inside your mod automatically.
+
+<Image
+  src={img_yona_project_build_button}
+  alt="Build your project by clicking the Build button in the top-right of the Project Page."
+/>
+
+2. Once you see the **Build Success** notification, you're finished! Test your mod in-game, and if everything is working, congrats on your music mod! 🎉
+
+<Image
+  src={img_yona_project_build_finish}
+  alt="Once building is finished, the build success notification will appear."
+/>
+
+3. Whenever you make any changes in the future, remember to click **Build** again to apply them to your mod!
+
+<Aside type="tip" title="Fast Build and You">
+
+**Fast Build** is a feature in **Yona** to make building as fast as possible, but it can break if you **add** or **remove** any BGM files from your mod manually.
+
+If that happens, you can fix it by disabling **Fast Build** in your **Project Settings**, building once, then re-enabling it.
+
+</Aside>

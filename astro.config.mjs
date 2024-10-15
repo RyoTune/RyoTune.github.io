@@ -13,16 +13,29 @@ export default defineConfig({
       },
       sidebar: [
         {
+          label: "Guides",
+          items: [
+            {
+              label: "Audio",
+              items: [
+                {
+                  slug: "guides/audio/music-replacement-yona",
+                },
+                {
+                  slug: "guides/audio/music-looping",
+                },
+              ],
+            },
+            {
+              label: "Reloaded II",
+              autogenerate: { directory: "guides/reloaded" },
+            },
+          ],
+        },
+        {
           label: "Yona",
           autogenerate: {
             directory: "yona",
-            collapsed: false,
-          },
-        },
-        {
-          label: "Reference",
-          autogenerate: {
-            directory: "reference",
           },
         },
       ],
