@@ -1,0 +1,8 @@
+---
+import {Mods} from '../types/game'
+import ModInfoContainer from './ModInfoContainer.astro'
+---
+
+{Mods.map(mod =>
+  <ModInfoContainer {mod}/>
+)}

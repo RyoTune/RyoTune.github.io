@@ -1,0 +1,21 @@
+---
+import type { ModInfo } from '../types/game'
+
+interface Props{
+  mod: ModInfo;
+}
+
+const { mod } = Astro.props;
+---
+
+<div>
+  <b><a href={mod.url}>{mod.name}</a></b> (<a href={mod.ddl}>Reloaded DL</a>)<br/>
+  <span class="description">{mod.desc}</span><br/>
+  <span class="games">Games: <i>{mod.games.map(x => x.name).join(", ")}</i></span>
+</div>
+
+<style>
+  .games{
+    font-size: 0.8rem;
+  }
+</style>
