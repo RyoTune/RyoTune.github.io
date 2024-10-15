@@ -1,0 +1,66 @@
+---
+title: Creating a Reloaded Mod
+description: Create and add a Reloaded mod to a game.
+---
+
+import { Image } from "astro:assets";
+
+import img_re_manage_mods from "./images/reloaded-manage-mods-button.png";
+import img_re_manage_mods_new from "./images/reloaded-manage-mods-new.png";
+import img_re_create_id from "./images/reloaded-create-mod-id.png";
+import img_re_create_common from "./images/reloaded-create-mod-common.png";
+import img_re_create_dep from "./images/reloaded-create-mod-dependencies.png";
+import img_re_create_update from "./images/reloaded-create-mod-update.png";
+import img_re_create_finish from "./images/reloaded-create-mod-finish.png";
+import img_re_create_enable from "./images/reloaded-create-mod-enable.png";
+import img_re_mods_edit from "./images/reloaded-mods-edit.png";
+
+1. Click the **Manage Mods** button.
+
+<Image src={img_re_manage_mods} alt="Reloaded's Manage Mods Button" />
+
+2. Click the **New** button to create a new mod.
+
+<Image src={img_re_manage_mods_new} alt="Manage Mods New Button" />
+
+3. Enter a unique **Mod ID** for your mod. There are no requirements, but something like `Game.ModName` is recommended such as `P5R.CostumeFramework`.
+
+<Image src={img_re_create_id} alt="Creating a mod, setting a Mod ID." />
+
+4. Enter the basic details of your mod like its name, description, and version. Add an icon by clicking the **Reloaded icon** and selecting a new image.
+
+<Image
+  src={img_re_create_common}
+  alt="Creating a Mod, setting common details."
+/>
+
+5. [Add any **Mod Dependencies** your mod has](/guides/reloaded/02-mod-dependency). **Mod Dependencies** are mods that your mod **relies on** to work.
+
+<Image src={img_re_create_dep} alt="Creating a Mod, adding mod dependencies." />
+
+6. (Optional) [Add **Update Support** to your mod](/guides/reloaded/03-mod-updates). This lets **Reloaded** know whenever you release a new version and prompt your users to install it.
+
+<Image
+  src={img_re_create_update}
+  alt="Creating a Mod, adding update support."
+/>
+
+7. Add any games your mod supports, usually just one. This determines whether your mod will show up in a game's **Mods List**.
+
+<Image
+  src={img_re_create_finish}
+  alt="Creating a Mod, adding supported games."
+/>
+
+8. Go to your game's **Mods List** and enable your new mod.
+
+<Image src={img_re_create_enable} alt="Creating a Mod, enable your new mod." />
+
+9. Edit your mod at any time by **right-clicking** it in the **Mods List** and selecting **Edit Mod**.
+
+<Image
+  src={img_re_mods_edit}
+  alt="Edit a mod by right-clicking it in the Mods List."
+/>
+
+10. Finished! 🎉
