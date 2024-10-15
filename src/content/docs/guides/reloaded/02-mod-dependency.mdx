@@ -1,0 +1,49 @@
+---
+title: Adding a Mod Dependency
+description: Learn how to add a Mod Dependency to a mod.
+---
+
+import { Image } from "astro:assets";
+import { Aside } from "@astrojs/starlight/components";
+import { Mod_Ryo, getGamesList, Mods } from "../../../../types/game";
+import CommonMods from "../../../../components/CommonMods.astro";
+
+import img_re_mods_edit from "./images/reloaded-mods-edit.png";
+import img_re_create_dep from "./images/reloaded-create-mod-dependencies.png";
+import img_re_add_dep from "./images/reloaded-add-dependency.png";
+import img_re_add_dep_close from "./images/reloaded-add-dependency-close.png";
+
+Most mods usually rely on another mod to work. Adding a **Mod Dependency** on that mod will let
+**Reloaded** automatically install and enable it when people use your mod.
+
+<Aside>
+  A __Mod Dependency__ can only be added on mods that are installed. Make sure
+  the mod you want to add as a __Mod Dependency__ is __already__ installed.
+</Aside>
+
+## Common Mod Dependencies
+
+<CommonMods />
+
+## Steps
+
+1. You can add **Mod Dependencies** when creating a mod or by right-clicking an existing mod in the **Mods List** and selecting **Edit Mod**.
+
+<Image
+  src={img_re_mods_edit}
+  alt="Edit a mod by right-clicking it in the Mods List."
+/>
+
+<Image src={img_re_create_dep} alt="Creating a Mod, adding mod dependencies." />
+
+2. Select any mods your mod relies on to add them as a **Mod Dependency**.
+
+<Image src={img_re_add_dep} alt="Adding a mod dependency." />
+
+3. Once you're finished, close the window.
+
+<Image src={img_re_add_dep_close} alt="Close Mod Dependencies window." />
+
+4. **Restart Reloaded!** Mod dependency data is only **fully added** during **start-up**, so it's better to do it now instead of later.
+
+5. Finished! 🎉
