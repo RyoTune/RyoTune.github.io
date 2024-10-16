@@ -19,6 +19,9 @@ export default defineConfig({
               label: "Audio",
               items: [
                 {
+                  slug: "guides/audio/audio-replacement-ryo",
+                },
+                {
                   slug: "guides/audio/music-replacement-yona",
                 },
                 {
@@ -31,6 +34,12 @@ export default defineConfig({
               autogenerate: { directory: "guides/reloaded" },
             },
           ],
+        },
+        {
+          label: "Ryo Framework",
+          autogenerate: {
+            directory: "ryo",
+          },
         },
         {
           label: "Yona",

@@ -14,7 +14,11 @@ import {
 import { Image } from "astro:assets";
 
 import ModInfoContainer from "../../../../components/ModInfoContainer.astro";
-import { Mod_Ryo, Mod_PersonaEssentials } from "../../../../types/game";
+import {
+  Mod_Ryo,
+  Mod_PersonaEssentials,
+  Game_Metaphor,
+} from "../../../../types/game";
 
 import img_dl_net8 from "./images/download_net8.png";
 import img_dl_yona from "./images/download_yona.png";
@@ -35,6 +39,8 @@ import img_yona_project_track_panel_with_file from "./images/yona_project_track_
 import img_yona_project_track_panel_with_loop from "./images/yona_project_track_panel_with_loop.png";
 import img_yona_project_build_button from "./images/yona_project_build_button.png";
 import img_yona_project_build_finish from "./images/yona_project_build_finish.png";
+import img_yona_project_mf from "./images/yona_project_mf.png";
+import img_ryo_console_cue from "./images/ryo_console_cue.png";
 
 **Yona** comes with BGM project templates for mulitple games, making music replacement an incredibly easy process.
 
@@ -108,6 +114,22 @@ Install the required mod for audio replacement in your game.
 7. Your new project's **Project Page** will automatically open.
 
 <Image src={img_yona_project} alt="Your new project's page." />
+
+### Yona with Ryo Framework
+
+Some templates, like **{Game_Metaphor.name}'s**, will have tracks missing the song names.
+Until names are added, they'll instead show the **Cue ID** or **Cue Name**.
+
+<Image src={img_yona_project_mf} alt="Yona's Metaphor: ReFantazio project." />
+
+These **Cue IDs** or **Cue Names** are the same ones used to replace audio with **Ryo Framework**.
+
+<Image
+  src={img_ryo_console_cue}
+  alt="Example cue from the console using Ryo's Developer Mode."
+/>
+
+See [Audio Replacement with Ryo Framework](/guides/audio/audio-replacement-ryo) for more details.
 
 ## Selecting Your Music
 

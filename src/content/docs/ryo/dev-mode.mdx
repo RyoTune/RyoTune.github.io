@@ -1,0 +1,54 @@
+---
+title: Developer Mode
+description: Enable Developer Mode in Ryo Framework to see audio info in real-time.
+---
+
+import { Image } from "astro:assets";
+
+import img_ryo_configure from "./images/ryo_configure.png";
+import img_ryo_dev_mode from "./images/ryo_dev_mode.png";
+import img_ryo_enable_dev_mode from "./images/ryo_enable_dev_mode.png";
+
+**Developer Mode** gives you the information needed to replace audio or movies with **Ryo Framework**, especially
+useful for games lacking documentation.
+
+1. [Enable the **Reloaded Console**](/guides/reloaded/reloaded-console).
+
+2. In the game's **Mods List**, right-click **Ryo Framework** and select **Configure**.
+
+<Image
+  src={img_ryo_configure}
+  alt="Right-click Ryo Framework in the Mods List, and select Configure."
+/>
+
+3. In the **Configure Mod** window, enable **Developer Mode**. Click **Save** or **close the window** to save your settings.
+
+<Image
+  src={img_ryo_enable_dev_mode}
+  alt="Enable Developer Mode in Ryo's Configure Mod window."
+/>
+
+4. The **Reloaded Console** will now show info about currently playing **audio** and **movies**.
+
+<Image
+  src={img_ryo_dev_mode}
+  alt="The Reloaded Console showing audio info after enabling Developer Mode."
+/>
+
+## Developer Mode: Cues
+
+`SetCue || Player: PLAYER_ID || ACB: ACB_NAME || Cue: CUE_ID / CUE_NAME`
+
+The most common type of audio played.
+
+### Example
+
+`SetCue || Player: 0 || ACB: bgm || Cue: 1068 / 68_demo`
+
+- ACB Name: `bgm`
+- Cue ID: `1068`
+- Cue Name: `68_demo`
+
+## Developer Mode: Movies
+
+TODO
