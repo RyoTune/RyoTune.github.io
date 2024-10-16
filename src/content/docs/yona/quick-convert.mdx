@@ -1,0 +1,32 @@
+---
+title: Quick Convert
+description: Quickly convert and loop your audio files to formats usable in games.
+---
+
+import { Image } from "astro:assets";
+
+import img_yona_quick_convert_zone from "./images/quick_convert_drop_zone.png";
+import img_yona_convert_window_file from "./images/convert_window_file.png";
+import img_yona_convert_window_build from "./images/convert_window_build.png";
+
+1. On Yona's **Home** page, drag-and-drop file(s) or folder(s) into the **Quick Convert** drop zone.
+
+<Image
+  src={img_yona_quick_convert_zone}
+  alt="Yona's Home page Quick Convert drop zone."
+/>
+
+2. In the **Convert** window, you can set the following settings:
+   - **Encoder**: The encoder to use when converting the files.
+   - **File Loop**: The file's loop settings, if any.
+   - **Output Folder** (Optional): The folder to output converted files. If no **Output Folder** is set,
+     the converted files will be placed next to their input files.
+
+<Image src={img_yona_convert_window_file} alt="The Convert window." />
+
+3. Once you're finished with any settings, click the **Build** button to convert your files.
+
+<Image
+  src={img_yona_convert_window_build}
+  alt="The Convert window's Buidl button."
+/>
