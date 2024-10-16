@@ -3,4 +3,101 @@ title: Audio Replacement with Ryo Framework
 description: An introduction to replacing audio with Ryo Framework.
 ---
 
+import { Image } from "astro:assets";
+
+import ModInfoContainer from "../../../../components/ModInfoContainer.astro";
+import { Mod_Ryo } from "../../../../types/game";
+
+import img_ryo_mod_empty from "./images/ryo_mod_empty.png";
+import img_ryo_mod_with_folder from "./images/ryo_mod_with_folder.png";
+import img_ryo_mod_game_folder from "./images/ryo_mod_game_folder.png";
+import img_ryo_acb_folder from "./images/ryo_acb_folder.png";
+import img_ryo_acb_cue_file from "./images/ryo_acb_cue_file.png";
+import img_ryo_acb_cue_folder from "./images/ryo_acb_cue_folder.png";
+import img_ryo_acb_cue_folder_files from "./images/ryo_acb_cue_folder_with_files.png";
+
+## Requirements
+
+<ModInfoContainer mod={Mod_Ryo} />
+
+## Create a Ryo Mod
+
+1. In **Reloaded**, [create a new mod](/guides/reloaded/01-create-mod) and enable it.
+
+2. [Add a **Mod Dependency**](/guides/reloaded/02-mod-dependency) on **{Mod_Ryo.name}**.
+
+3. Open your mod's folder.
+
+<Image src={img_ryo_mod_empty} alt="Empty Ryo mod folder." />
+
+4. In your mod's folder, create a folder named `Ryo`.
+
+<Image src={img_ryo_mod_with_folder} alt="Ryo mod with Ryo folder." />
+
+5. Inside the `Ryo` folder, create a folder with the **same name** as the **game's EXE file**.
+
+<Image src={img_ryo_mod_game_folder} alt="Ryo folder with game folder." />
+
+6. All your **audio files** will go **inside** the **game's folder**.
+
+## Converting Your Files
+
+Before you can use your audio files, you'll probably need to **convert** them to a **format**
+your **game supports**.
+
+[**Yona**](/yona/installing-yona) is recommended since it includes pre-made encoders for multiple games.
+[Quick Convert](/yona/quick-convert) also streamlines converting and looping multiple files at once.
+
+If you're not sure what the correct format for your game is, check the [Game Encoders](/yona/game-encoders) page.
+
+## Replacing Audio
+
+**Ryo Framework** supports replacing audio played with various methods, but most supported games will be using **Cues**.
+
+If you're not sure what your game uses, check the [Reloaded Console](/guides/reloaded/reloaded-console) with [Developer Mode](/ryo/dev-mode) enabled.
+
+### Cues
+
+The most common type of audio played.
+
+To replace **Cues**, you need **two** pieces of data: the **ACB Name** it's from and its **Cue ID** or **Cue Name**.
+
+If you don't know them, the easiest way to figure them out is get the audio to play in-game with **Ryo Framework's** [Developer Mode](/ryo/dev-mode) enabled.
+
+#### ACB Folder
+
+In the **game's folder**, create a folder with the **ACB Name** ending with `.acb`. This is an **ACB Folder**.
+
+<Image src={img_ryo_acb_folder} alt="An ACB folder in the game's folder." />
+
+In an **ACB Folder**, there are two methods to replace a **Cue**.
+
+#### Cue File
+
+The simplest method, just add a file named the same as the **Cue ID** or **Cue Name**.
+
+<Image src={img_ryo_acb_cue_file} alt="Cue File in an ACB Folder." />
+
+#### Cue Folder
+
+_Slightly_ more advanced, but with some extra features. Create a folder named the same as the **Cue ID** or **Cue Name** ending with `.cue`. This is a **Cue Folder**.
+
+<Image src={img_ryo_acb_cue_folder} alt="Cue Folder in an ACB Folder." />
+
+Inside the **Cue Folder**, add your replacement file(s). In a **Cue Folder**, not only do file names not matter but adding **multiple files**
+will automatically **randomize** the **Cue**.
+
+A very easy method for adding something like **music randomization** to a game.
+
+<Image
+  src={img_ryo_acb_cue_folder_files}
+  alt="Cue Folder with files in an ACB Folder."
+/>
+
+### Files
+
+TODO
+
+### Waves
+
 TODO

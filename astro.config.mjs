@@ -27,6 +27,9 @@ export default defineConfig({
                 {
                   slug: "guides/audio/music-looping",
                 },
+                {
+                  slug: "yona/game-encoders",
+                },
               ],
             },
             {
