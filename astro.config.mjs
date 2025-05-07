@@ -9,8 +9,15 @@ export default defineConfig({
     starlight({
       title: "RyoTune",
       social: {
-        github: "https://github.com/RyoTune",
+        github: "",
       },
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/RyoTune/RyoTune.github.io",
+        },
+      ],
       sidebar: [
         {
           label: "Guides",
