@@ -57,6 +57,12 @@ export default defineConfig({
             directory: "yona",
           },
         },
+        {
+          label: "Licensing",
+          autogenerate: {
+            directory: "licensing",
+          },
+        },
       ],
     }),
     svelte(),
